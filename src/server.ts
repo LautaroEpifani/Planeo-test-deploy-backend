@@ -105,21 +105,3 @@ const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
   console.log(`Escuchando en el puerto ${PORT}...`);
 });
-
-const shutdown = () => {
-  console.log("Shutting down server...");
-  server.close(() => {
-    console.log("Server closed gracefully");
-    process.exit(0);
-  });
-
-  // Si el servidor no cierra dentro de 10 segundos, forzamos el cierre
-  setTimeout(() => {
-    console.error("Forcing server shutdown");
-    process.exit(1);
-  }, 10000);
-};
-
-// Escucha señales de terminación
-process.on("SIGINT", shutdown); // Ctrl + C
-process.on("SIGTERM", shutdown);

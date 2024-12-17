@@ -1,7 +1,7 @@
 {
   "name": "planeo-backend",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "dist/server.js",
   "type": "commonjs",
   "scripts": {
     "start": "node dist/server.js",

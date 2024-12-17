@@ -30,7 +30,7 @@ bower_components/
 .nuxt/
 
 # TypeScript compiled files
-/dist/
+# /dist/
 
 # VSCode settings
 .vscode/
